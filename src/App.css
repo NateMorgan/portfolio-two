@@ -1,14 +1,45 @@
 .App {
   text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+header:hover .nickname, footer:hover .nickname{
+  color:#0077b6;
+  text-shadow: 2px 2px 4px black;
+}
+
+.nickname {
+  color:inherit;
+  -moz-transition:color 1.5s, text-shadow 1.5s; /* Firefox 4 */
+  -webkit-transition:color 1.5s, text-shadow 1.5s; /* Safari and Chrome */
+  -o-transition:color 1.5s, text-shadow 1.5s;
+  transition:color 1.5s, text-shadow 1.5s;
+  transition-timing-function:cubic-bezier(0,1.9,1,-0.73);
+}
+
+.nickname-hide{
+  font-size: inherit;
+  -moz-transition:font-size 1.5s; /* Firefox 4 */
+  -webkit-transition:font-size 1.5s; /* Safari and Chrome */
+  -o-transition:font-size 1.5s;
+  transition:font-size 1.5s;
+  transition-timing-function:cubic-bezier(0,1.9,1,-0.73);
+}
+
+header:hover .nickname-hide, footer:hover .nickname-hide{
+  font-size:0px;
+}
+
+footer {
+  color:white;
 }
